@@ -1,0 +1,11 @@
+<div class="product-card w-100 flex flex-col items-center gap-2 rounded-lg cursor-pointer transition duration-300 shadow-xl  hover:shadow-lg hover:scale-102 pb-5">
+    <img
+        [src]="product().thumbnail"
+        [alt]="product().title" class="w-full object-cover">
+
+    <div class="details flex flex-col items-start gap-1">
+        <h3 class="text-xl">{{ product().title }}</h3>
+        <p class="text-lg font-bold">${{product().price}} USD</p>
+        <p class="text-sm text-gray-500">Rating: {{product().rating}}</p>
+    </div>
+</div>

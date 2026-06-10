@@ -1,0 +1,17 @@
+    <div class="text-[4rem] font-bold font-mono cursor-none text-center">Dashboard Page</div>
+   <div class="flex justify-between items-center p-[4vw]">
+    <div class="flex flex-col items-start">
+        <div class="text-[4rem] font-bold cursor-none leading-none">Hello, </div>
+        <div class="text-[8rem] font-extrabold cursor-none leading-none">{{username()}} </div>
+    </div>
+
+    <div class="flex flex-col items-start gap-8">
+        <p class="text-xl">Find the links below :</p>
+        <nav>
+            <ul class="flex gap-4">
+                <li class="p-3 bg-black hover:bg-white hover:text-black border-2 border-white hover:border-black transition duration-300 w-[12vw] text-white flex justify-center items-center cursor-pointer rounded-lg"><a [routerLink]="['/products']">Products</a></li>
+                <li class="p-3 hover:bg-black w-[12vw] border-2 border-black hover:border-white transition duration-300 hover:text-white flex justify-center items-center cursor-pointer rounded-lg"><a [routerLink]="['/profile']">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>

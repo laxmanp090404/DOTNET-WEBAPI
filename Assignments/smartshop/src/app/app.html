@@ -1,0 +1,8 @@
+<!-- <app-login></app-login> -->
+ @if(!isLoggedIn()){
+  <app-login></app-login>
+ } 
+ @else {
+<app-header></app-header>
+  <router-outlet></router-outlet>
+ }

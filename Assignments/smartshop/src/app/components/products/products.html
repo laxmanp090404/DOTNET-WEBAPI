@@ -1,0 +1,20 @@
+<section class="products-container">
+
+    @if (products().length === 0) {
+        <p>No products available</p>
+    }
+    @else {
+        <div class="flex flex-wrap gap-4 justify-center items-center p-5">
+        @for (product of products(); track product.id) {
+
+            <app-product
+                [product]="product"
+                (click)="onProductClick(product.id)">
+            </app-product>
+
+        }
+        </div>
+
+    }
+
+</section>
