@@ -1,0 +1,21 @@
+PROJECT: Online Retail Order Management System
+
+We are a mid-sized retail company looking to build an online order management platform.
+Customers should be able to browse our product catalogue, add items to a cart, and place orders.
+We need to support multiple payment methods including credit/debit cards and UPI.
+
+Once an order is placed, our warehouse staff need to be able to view pending orders, 
+mark items as picked and packed, and generate shipping labels. 
+We use a third-party courier (BlueDart or Delhivery) for delivery.
+
+Customers must be able to track their order in real time and receive email/SMS updates 
+at each stage (order confirmed, dispatched, out for delivery, delivered).
+
+Our support team needs a dashboard to view all orders, handle returns/refunds, 
+and escalate issues to the warehouse or logistics team.
+
+We expect around 5,000 orders per day initially, scaling to 50,000 during sale seasons.
+The platform must be available 24/7 with no more than 1 hour of planned downtime per month.
+
+We also need basic sales reporting — daily order counts, revenue by category, 
+and top-selling products.

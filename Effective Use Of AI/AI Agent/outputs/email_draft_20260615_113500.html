@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Requirements Analysis</title>
+</head>
+<body style="margin:0;padding:0;font-family:'Segoe UI',Arial,sans-serif;
+             background:#f1f5f9;">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr><td align="center" style="padding:24px 16px;">
+      <table width="640" cellpadding="0" cellspacing="0"
+             style="background:#ffffff;border-radius:8px;
+                    box-shadow:0 1px 3px rgba(0,0,0,0.1);overflow:hidden;">
+
+        <!-- Header -->
+        <tr><td style="background:#1a56db;padding:28px 32px;">
+          <h1 style="margin:0;color:#fff;font-size:22px;font-weight:700;">
+            Requirements Analysis Report
+          </h1>
+          <p style="margin:6px 0 0 0;color:rgba(255,255,255,0.8);font-size:13px;">
+            Prepared for: Team &nbsp;|&nbsp; 15 June 2026
+          </p>
+        </td></tr>
+
+        <!-- Body -->
+        <tr><td style="padding:32px;">
+
+          <p style="margin:0 0 20px 0;font-size:14px;color:#374151;line-height:1.6;">
+            Dear Team,<br><br>
+            Thank you for sharing your requirements with us. Please find below our
+            structured analysis, including functional and non-functional requirements,
+            identified risks, working assumptions, and questions we'd like to clarify
+            before proceeding.
+          </p>
+
+          <!-- Executive Summary -->
+          <div style="background:#f8fafc;border-left:4px solid #1a56db;
+                      padding:14px 18px;border-radius:0 6px 6px 0;margin-bottom:28px;">
+            <strong style="font-size:13px;color:#1a56db;">Executive Summary</strong>
+            <p style="margin:6px 0 0 0;font-size:13px;color:#374151;line-height:1.6;">
+              The Online Retail Order Management System will enable customers to browse products, place orders using multiple payment methods, and track their deliveries. It will provide tools for warehouse staff to manage order fulfillment, including picking, packing, and shipping label generation, and for support teams to handle customer inquiries, returns, and escalations. The platform must be highly scalable to accommodate fluctuating order volumes and maintain 24/7 availability, while also providing basic sales reporting.
+            </p>
+          </div>
+
+          
+        <div style="margin-bottom:28px;">
+          <h2 style="font-size:16px;font-weight:700;color:#1a56db;
+                     border-bottom:2px solid #1a56db;padding-bottom:6px;
+                     margin:0 0 12px 0;">📋 Functional Requirements</h2>
+          
+    <table style="width:100%;border-collapse:collapse;">
+      <thead><tr style="background:#f8fafc;">
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">ID</th>
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Feature</th>
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Description</th>
+        <th style="padding:8px 12px;text-align:center;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Priority</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-01</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Product Catalogue Browsing</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Customers can browse the product catalogue, view product details, and search for specific items.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-02</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Shopping Cart Management</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Customers can add items to a shopping cart, update quantities, and remove items before placing an order.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-03</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Order Placement</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Customers can proceed from the shopping cart to place an order, providing necessary shipping and contact details.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-04</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Multiple Payment Options</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">The system must support multiple payment methods, including credit/debit cards and UPI, via integration with payment gateways.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-05</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Warehouse Order Viewing</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Warehouse staff can view a list of pending orders, including product details and quantities, for fulfillment.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-06</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Order Picking & Packing Status Update</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Warehouse staff can mark individual items or entire orders as 'picked' and 'packed' within the system.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-07</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Shipping Label Generation</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Warehouse staff can generate shipping labels for fulfilled orders, integrating with third-party courier services.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-08</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Third-Party Courier Integration</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">The system must integrate with BlueDart and Delhivery for shipping label generation and potentially for tracking updates.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-09</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Real-time Order Tracking</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Customers can track the real-time status and progress of their placed orders.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-10</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Order Status Notifications</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Customers receive automated email/SMS updates at key stages of their order (e.g., confirmed, dispatched, out for delivery, delivered).</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-11</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Support Team Order Dashboard</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Support staff have access to a dashboard to view all customer orders, their details, and current status.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-12</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Returns and Refunds Management</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Support staff can process customer returns and initiate refunds for eligible orders through the system.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-13</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Issue Escalation</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Support staff can escalate order-related issues to the warehouse or logistics team for resolution.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#d97706;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">Medium</span></td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;white-space:nowrap;">FR-14</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Basic Sales Reporting</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">The system must provide basic sales reports, including daily order counts, revenue by category, and top-selling products.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#d97706;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">Medium</span></td>
+        </tr></tbody>
+    </table>
+        </div>
+          
+        <div style="margin-bottom:28px;">
+          <h2 style="font-size:16px;font-weight:700;color:#1a56db;
+                     border-bottom:2px solid #1a56db;padding-bottom:6px;
+                     margin:0 0 12px 0;">⚙️ Non-Functional Requirements</h2>
+          
+    <table style="width:100%;border-collapse:collapse;">
+      <thead><tr style="background:#f8fafc;">
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">ID</th>
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Category</th>
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Requirement</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">NFR-01</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Scalability</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">The system must be able to handle an initial load of 5,000 orders per day, scaling up to 50,000 orders per day during peak sale seasons without significant performance degradation.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">NFR-02</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Reliability</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">The platform must be available 24/7, with a maximum of 1 hour of planned downtime per month.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">NFR-03</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Performance</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Customer-facing pages and critical internal dashboards must load within 3 seconds under normal and peak load conditions.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">NFR-04</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Security</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">All customer data, payment information, and internal operational data must be protected against unauthorized access, modification, or disclosure through appropriate security measures.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">NFR-05</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;font-weight:600;color:#111827;">Usability</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">The customer-facing interface, warehouse interface, and support dashboard must be intuitive and easy to use for their respective user groups to ensure efficient operations and customer satisfaction.</td>
+        </tr></tbody>
+    </table>
+        </div>
+          
+        <div style="margin-bottom:28px;">
+          <h2 style="font-size:16px;font-weight:700;color:#1a56db;
+                     border-bottom:2px solid #1a56db;padding-bottom:6px;
+                     margin:0 0 12px 0;">⚠️ Risks & Mitigations</h2>
+          
+    <table style="width:100%;border-collapse:collapse;">
+      <thead><tr style="background:#f8fafc;">
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">ID</th>
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Risk</th>
+        <th style="padding:8px 12px;text-align:center;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Severity</th>
+        <th style="padding:8px 12px;text-align:left;font-size:12px;
+                   color:#6b7280;border-bottom:2px solid #e2e8f0;">Mitigation</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;">R-01</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Payment gateway integration failures leading to failed transactions and lost sales.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Implement robust error handling, retry mechanisms, and real-time monitoring for all payment gateway integrations. Provide alternative payment options or clear error messages to customers.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;">R-02</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Third-party courier integration issues causing delays in shipping label generation or inaccurate tracking information.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#d97706;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">Medium</span></td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Implement fallback mechanisms (e.g., manual label generation), monitor integration health, and establish clear communication protocols with courier partners for rapid issue resolution.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;">R-03</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">System performance degradation during peak sale seasons due to high order volume, impacting customer experience and operational efficiency.</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#dc2626;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">High</span></td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Conduct thorough load testing prior to peak seasons, implement auto-scaling infrastructure, optimize database queries, and utilize caching strategies to handle increased traffic.</td>
+        </tr>
+        <tr>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;">R-04</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Data inconsistencies between the order management system and external services (e.g., inventory, payment status, courier tracking).</td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     text-align:center;"><span style="background:#d97706;color:#fff;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;">Medium</span></td>
+          <td style="padding:8px 12px;border-bottom:1px solid #e2e8f0;
+                     font-size:13px;color:#374151;">Implement transactional integrity, idempotent operations for external calls, and regular data reconciliation processes with comprehensive logging and alerting for discrepancies.</td>
+        </tr></tbody>
+    </table>
+        </div>
+          
+        <div style="margin-bottom:28px;">
+          <h2 style="font-size:16px;font-weight:700;color:#1a56db;
+                     border-bottom:2px solid #1a56db;padding-bottom:6px;
+                     margin:0 0 12px 0;">📌 Working Assumptions</h2>
+          <ul style="margin:0;padding-left:20px;"><li style="margin:6px 0;font-size:13px;color:#374151;"><strong>A-01:</strong> A comprehensive product catalogue with necessary attributes (SKU, price, description, images, stock levels) is available and can be imported or managed within the system.</li><li style="margin:6px 0;font-size:13px;color:#374151;"><strong>A-02:</strong> User authentication and authorization mechanisms for customers, warehouse staff, and support team will be provided or built as part of the solution.</li><li style="margin:6px 0;font-size:13px;color:#374151;"><strong>A-03:</strong> APIs for the selected payment gateways (credit/debit cards, UPI) are available, well-documented, and provide necessary functionality for transaction processing and status updates.</li><li style="margin:6px 0;font-size:13px;color:#374151;"><strong>A-04:</strong> APIs for BlueDart and Delhivery couriers are available for shipping label generation and real-time tracking updates.</li></ul>
+        </div>
+          
+        <div style="margin-bottom:28px;">
+          <h2 style="font-size:16px;font-weight:700;color:#1a56db;
+                     border-bottom:2px solid #1a56db;padding-bottom:6px;
+                     margin:0 0 12px 0;">❓ Questions for Your Team</h2>
+          <ul style="margin:0;padding-left:20px;"><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">What are the specific data attributes required for each product in the catalogue, including variations (e.g., size, color) and how will inventory levels be managed and updated?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To define the product data model, inventory management strategy, and potential integration with existing inventory systems.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">Are there specific payment gateway providers preferred or mandated for credit/debit cards and UPI, or should the system support generic integrations?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To determine specific integration efforts, costs, and potential vendor lock-in.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">What are the exact stages of the order lifecycle for which customers should receive email/SMS notifications, and what content should these notifications include?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To define notification triggers, templates, and communication channels, impacting the notification service design.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">What specific information (e.g., sender address, recipient details, package weight/dimensions, service type) is required by BlueDart and Delhivery for shipping label generation?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To design the data capture and integration payload for courier services accurately.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">What is the detailed workflow for handling returns and refunds, including conditions for eligibility, approval processes, and integration with inventory/accounting?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To define the business logic and system features for post-order management and financial reconciliation.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">What are the expected response times for customer-facing pages and internal dashboards under both normal and peak load conditions?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To set specific performance targets and guide architectural decisions for infrastructure and code optimization.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">Is there an existing inventory management system (IMS) or enterprise resource planning (ERP) system that needs to be integrated for stock level synchronization or other data?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To identify potential integration points and avoid duplicate data management, impacting system architecture.</span></li><li style="margin:8px 0;"><span style="font-size:13px;color:#111827;font-weight:600;">What level of detail is required for sales reporting, and are there any specific filters, aggregations, or export formats needed beyond the basic requirements?</span><br><span style="font-size:12px;color:#6b7280;font-style:italic;">Rationale: To accurately scope the reporting module and ensure it meets business intelligence needs.</span></li></ul>
+        </div>
+
+          
+        <div style="background:#fffbeb;border:1px solid #fcd34d;border-radius:6px;
+                    padding:16px 20px;margin-top:24px;">
+          <h3 style="margin:0 0 8px 0;font-size:14px;color:#92400e;">
+            ⚠️ Information Gaps Identified
+          </h3>
+          <ul style="margin:0;padding-left:20px;"><li style="margin:4px 0;font-size:13px;color:#92400e;">Detailed inventory management strategy (e.g., stock reservation, backorders, multi-warehouse support).</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Customer account management features (e.g., registration, login, profile management, order history view for logged-in users).</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Specifics of tax calculation and shipping cost calculation rules.</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Fraud detection mechanisms for orders and payments.</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Error handling and logging strategy for system operations and integrations.</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Data retention policies for orders, customer data, and logs.</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Detailed user roles and permissions beyond the general categories (customer, warehouse, support).</li><li style="margin:4px 0;font-size:13px;color:#92400e;">Marketing and promotional features (e.g., discounts, coupons, loyalty programs).</li></ul>
+        </div>
+
+          <p style="margin:28px 0 0 0;font-size:13px;color:#374151;line-height:1.6;">
+            We look forward to your responses so we can refine this analysis and
+            move into solution design. Please don't hesitate to schedule a call
+            if you'd prefer to walk through these points together.
+          </p>
+
+          <p style="margin:20px 0 0 0;font-size:13px;color:#374151;">
+            Kind regards,<br>
+            <strong>Solutions Architecture Team</strong>
+          </p>
+
+        </td></tr>
+
+        <!-- Footer -->
+        <tr><td style="background:#f8fafc;padding:16px 32px;
+                        border-top:1px solid #e2e8f0;">
+          <p style="margin:0;font-size:11px;color:#9ca3af;text-align:center;">
+            This document was auto-generated on 15 June 2026.
+            Confidential — for the intended recipient only.
+          </p>
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

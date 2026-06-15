@@ -1,0 +1,101 @@
+REQUIREMENTS ANALYSIS REPORT
+Prepared for: Team  |  15 June 2026
+============================================================
+
+Dear Team,
+
+Please find below our structured analysis of the requirements you shared.
+
+EXECUTIVE SUMMARY
+----------------------------------------
+The Online Retail Order Management System will enable customers to browse products, place orders using multiple payment methods, and track their deliveries. It will provide tools for warehouse staff to manage order fulfillment, including picking, packing, and shipping label generation, and for support teams to handle customer inquiries, returns, and escalations. The platform must be highly scalable to accommodate fluctuating order volumes and maintain 24/7 availability, while also providing basic sales reporting.
+
+FUNCTIONAL REQUIREMENTS
+----------------------------------------
+[FR-01] [High] Product Catalogue Browsing
+  Customers can browse the product catalogue, view product details, and search for specific items.
+[FR-02] [High] Shopping Cart Management
+  Customers can add items to a shopping cart, update quantities, and remove items before placing an order.
+[FR-03] [High] Order Placement
+  Customers can proceed from the shopping cart to place an order, providing necessary shipping and contact details.
+[FR-04] [High] Multiple Payment Options
+  The system must support multiple payment methods, including credit/debit cards and UPI, via integration with payment gateways.
+[FR-05] [High] Warehouse Order Viewing
+  Warehouse staff can view a list of pending orders, including product details and quantities, for fulfillment.
+[FR-06] [High] Order Picking & Packing Status Update
+  Warehouse staff can mark individual items or entire orders as 'picked' and 'packed' within the system.
+[FR-07] [High] Shipping Label Generation
+  Warehouse staff can generate shipping labels for fulfilled orders, integrating with third-party courier services.
+[FR-08] [High] Third-Party Courier Integration
+  The system must integrate with BlueDart and Delhivery for shipping label generation and potentially for tracking updates.
+[FR-09] [High] Real-time Order Tracking
+  Customers can track the real-time status and progress of their placed orders.
+[FR-10] [High] Order Status Notifications
+  Customers receive automated email/SMS updates at key stages of their order (e.g., confirmed, dispatched, out for delivery, delivered).
+[FR-11] [High] Support Team Order Dashboard
+  Support staff have access to a dashboard to view all customer orders, their details, and current status.
+[FR-12] [High] Returns and Refunds Management
+  Support staff can process customer returns and initiate refunds for eligible orders through the system.
+[FR-13] [Medium] Issue Escalation
+  Support staff can escalate order-related issues to the warehouse or logistics team for resolution.
+[FR-14] [Medium] Basic Sales Reporting
+  The system must provide basic sales reports, including daily order counts, revenue by category, and top-selling products.
+
+NON-FUNCTIONAL REQUIREMENTS
+----------------------------------------
+[NFR-01] [Scalability] The system must be able to handle an initial load of 5,000 orders per day, scaling up to 50,000 orders per day during peak sale seasons without significant performance degradation.
+[NFR-02] [Reliability] The platform must be available 24/7, with a maximum of 1 hour of planned downtime per month.
+[NFR-03] [Performance] Customer-facing pages and critical internal dashboards must load within 3 seconds under normal and peak load conditions.
+[NFR-04] [Security] All customer data, payment information, and internal operational data must be protected against unauthorized access, modification, or disclosure through appropriate security measures.
+[NFR-05] [Usability] The customer-facing interface, warehouse interface, and support dashboard must be intuitive and easy to use for their respective user groups to ensure efficient operations and customer satisfaction.
+
+RISKS & MITIGATIONS
+----------------------------------------
+[R-01] [High] Payment gateway integration failures leading to failed transactions and lost sales.
+  Mitigation: Implement robust error handling, retry mechanisms, and real-time monitoring for all payment gateway integrations. Provide alternative payment options or clear error messages to customers.
+[R-02] [Medium] Third-party courier integration issues causing delays in shipping label generation or inaccurate tracking information.
+  Mitigation: Implement fallback mechanisms (e.g., manual label generation), monitor integration health, and establish clear communication protocols with courier partners for rapid issue resolution.
+[R-03] [High] System performance degradation during peak sale seasons due to high order volume, impacting customer experience and operational efficiency.
+  Mitigation: Conduct thorough load testing prior to peak seasons, implement auto-scaling infrastructure, optimize database queries, and utilize caching strategies to handle increased traffic.
+[R-04] [Medium] Data inconsistencies between the order management system and external services (e.g., inventory, payment status, courier tracking).
+  Mitigation: Implement transactional integrity, idempotent operations for external calls, and regular data reconciliation processes with comprehensive logging and alerting for discrepancies.
+
+ASSUMPTIONS
+----------------------------------------
+[A-01] A comprehensive product catalogue with necessary attributes (SKU, price, description, images, stock levels) is available and can be imported or managed within the system.
+[A-02] User authentication and authorization mechanisms for customers, warehouse staff, and support team will be provided or built as part of the solution.
+[A-03] APIs for the selected payment gateways (credit/debit cards, UPI) are available, well-documented, and provide necessary functionality for transaction processing and status updates.
+[A-04] APIs for BlueDart and Delhivery couriers are available for shipping label generation and real-time tracking updates.
+
+QUESTIONS FOR YOUR TEAM
+----------------------------------------
+[Q-01] What are the specific data attributes required for each product in the catalogue, including variations (e.g., size, color) and how will inventory levels be managed and updated?
+  Why: To define the product data model, inventory management strategy, and potential integration with existing inventory systems.
+[Q-02] Are there specific payment gateway providers preferred or mandated for credit/debit cards and UPI, or should the system support generic integrations?
+  Why: To determine specific integration efforts, costs, and potential vendor lock-in.
+[Q-03] What are the exact stages of the order lifecycle for which customers should receive email/SMS notifications, and what content should these notifications include?
+  Why: To define notification triggers, templates, and communication channels, impacting the notification service design.
+[Q-04] What specific information (e.g., sender address, recipient details, package weight/dimensions, service type) is required by BlueDart and Delhivery for shipping label generation?
+  Why: To design the data capture and integration payload for courier services accurately.
+[Q-05] What is the detailed workflow for handling returns and refunds, including conditions for eligibility, approval processes, and integration with inventory/accounting?
+  Why: To define the business logic and system features for post-order management and financial reconciliation.
+[Q-06] What are the expected response times for customer-facing pages and internal dashboards under both normal and peak load conditions?
+  Why: To set specific performance targets and guide architectural decisions for infrastructure and code optimization.
+[Q-07] Is there an existing inventory management system (IMS) or enterprise resource planning (ERP) system that needs to be integrated for stock level synchronization or other data?
+  Why: To identify potential integration points and avoid duplicate data management, impacting system architecture.
+[Q-08] What level of detail is required for sales reporting, and are there any specific filters, aggregations, or export formats needed beyond the basic requirements?
+  Why: To accurately scope the reporting module and ensure it meets business intelligence needs.
+
+INFORMATION GAPS
+----------------------------------------
+• Detailed inventory management strategy (e.g., stock reservation, backorders, multi-warehouse support).
+• Customer account management features (e.g., registration, login, profile management, order history view for logged-in users).
+• Specifics of tax calculation and shipping cost calculation rules.
+• Fraud detection mechanisms for orders and payments.
+• Error handling and logging strategy for system operations and integrations.
+• Data retention policies for orders, customer data, and logs.
+• Detailed user roles and permissions beyond the general categories (customer, warehouse, support).
+• Marketing and promotional features (e.g., discounts, coupons, loyalty programs).
+
+Kind regards,
+Solutions Architecture Team
