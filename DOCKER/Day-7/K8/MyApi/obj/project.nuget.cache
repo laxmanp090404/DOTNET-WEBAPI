@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "0bXsZ9pdqqM=",
+  "success": true,
+  "projectFilePath": "/Users/laxmanp/PRESIDIO INTERNSHIP/DotnetWebApi/DOCKER/Day-7/K8/MyApi/MyApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/laxmanp/.nuget/packages/npgsql/10.0.1/npgsql.10.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
